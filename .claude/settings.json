@@ -1,0 +1,30 @@
+{
+  "enabledPlugins": {
+    "claude-code-setup@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -qE '\\.(env|db|sqlite)'; then echo 'BLOCKED: Cannot edit .env or database files directly' && exit 2; fi"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/vilareal/git/gocase/recipebox && bun run check-types 2>&1 | tail -20"
+          }
+        ]
+      }
+    ]
+  }
+}
