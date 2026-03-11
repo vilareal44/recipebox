@@ -1,0 +1,3 @@
+Dispare múltiplos agentes (uns 10, por exemplo) e descubra quais são os padrões que seguimos em @supabase/functions/.                                                             
+Queremos criar uma skill que será usada para criar a estrutura inicial de uma nova edge function sempre que precisarmos criar uma nova.
+Se você encontrar múltiplos padrões de edge function, adicione uma chamada a tool `AskUserQuestion` de pergunta à skill para que o usuário decida qual padrão seguir.
