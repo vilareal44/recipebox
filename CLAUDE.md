@@ -93,3 +93,15 @@ Both apps use `@/*` → `./src/*` path alias (configured in tsconfig and vite co
 - **Image URL coercion**: Empty string `imageUrl` is converted to `null` in the service layer
 - **Valid categories**: `breakfast`, `lunch`, `dinner`, `dessert`, `snack` (defined in Zod DTO schema)
 - **Query client defaults**: `staleTime: 60s`, `retry: 1`, `refetchOnWindowFocus: false` (configured in `src/lib/query-client.ts`)
+
+## Design System
+
+All UI code must follow the design system. Full reference: `.claude/skills/design-system/SKILL.md`
+
+Critical rules:
+1. **ALWAYS** use `amber-500`/`amber-600` for primary actions — never blue, green, or other colors
+2. **ALWAYS** use `bg-white rounded-xl shadow-sm border border-gray-100` for content cards
+3. **ALWAYS** use the shared input class: `w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent`
+4. **ALWAYS** use `max-w-6xl mx-auto px-4 sm:px-6` for page containers
+5. **NEVER** use raw Tailwind color stops outside the gray/amber palette — use established tokens only
+6. **NEVER** add shadows to buttons or inputs — only cards get shadows
