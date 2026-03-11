@@ -10,13 +10,21 @@ export function Layout() {
             <UtensilsCrossed className="w-6 h-6 text-amber-600" />
             <span className="text-xl font-bold">RecipeBox</span>
           </Link>
-          <Link
-            to="/recipes/new"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
-          >
-            <Plus className="w-4 h-4" />
-            New Recipe
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/about"
+              className="text-sm text-gray-600 hover:text-amber-600 font-medium transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              to="/recipes/new"
+              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+            >
+              <Plus className="w-4 h-4" />
+              New Recipe
+            </Link>
+          </div>
         </div>
       </header>
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
