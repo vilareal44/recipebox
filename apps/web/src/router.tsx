@@ -5,6 +5,7 @@ import { RecipeDetailPage } from '@/pages/recipe-detail';
 import { CreateRecipePage } from '@/pages/create-recipe';
 import { EditRecipePage } from '@/pages/edit-recipe';
 import { AboutPage } from '@/pages/about';
+import { ContactPage } from '@/pages/contact';
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
     children: [
       { path: '/', element: <HomePage /> },
       { path: '/about', element: <AboutPage /> },
+      { path: '/contact', element: <ContactPage /> },
       { path: '/recipes/new', element: <CreateRecipePage /> },
       { path: '/recipes/:id', element: <RecipeDetailPage /> },
       { path: '/recipes/:id/edit', element: <EditRecipePage /> },
