@@ -18,6 +18,12 @@ export function Layout() {
             Sobre
           </Link>
           <Link
+            to="/contact"
+            className="text-sm text-gray-600 hover:text-amber-600 font-medium transition-colors"
+          >
+            Contato
+          </Link>
+          <Link
             to="/recipes/new"
             className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
           >
